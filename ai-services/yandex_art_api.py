@@ -5,8 +5,8 @@ from PIL import Image
 from yandex_cloud_ml_sdk import YCloudML
 
 sdk = YCloudML(
-    folder_id="YANDEX_FOLDER_ID",
-    auth="YANDEX_API_KEY",
+    folder_id="",
+    auth="",
 )
 model = sdk.models.image_generation('yandex-art')
 model.configure(

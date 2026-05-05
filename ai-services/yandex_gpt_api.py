@@ -1,8 +1,8 @@
 from yandex_cloud_ml_sdk import YCloudML
 
 sdk = YCloudML(
-    folder_id="YANDEX_FOLDER_ID",
-    auth="YANDEX_API_KEY",
+    folder_id="",
+    auth="",
 )
 model = sdk.models.completions('yandexgpt-lite')
 model.configure(
@@ -17,6 +17,5 @@ messages = [
     {'role': 'user', 'text': user_prompt},
 ]
 
-operation = model.run_deferred(messages)
-result = operation.wait()
+result = model.run(messages)
 print(result.text)
